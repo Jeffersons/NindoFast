@@ -1,0 +1,30 @@
+# Xcode
+DerivedData/
+build/
+xcuserdata/
+*.xccheckout
+*.xcscmblueprint
+*.xcuserdatad
+*.xcuserstate
+*.moved-aside
+
+# Swift Package Manager
+/.build/
+Packages/
+Package.resolved
+
+# Signing & Profiles
+*.mobileprovision
+*.provisionprofile
+*.xcodeproj/project.xcworkspace/xcshareddata/
+*.xcodeproj/xcshareddata/
+*.xcodeproj/xcuserdata/
+*.xcconfig.local
+
+# Logs
+*.log
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride

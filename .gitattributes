@@ -1,0 +1,14 @@
+# Enforce LF line endings for text files
+*.swift          text eol=lf
+*.xcconfig       text eol=lf
+*.md             text eol=lf
+*.sh             text eol=lf
+*.yml            text eol=lf
+*.yaml           text eol=lf
+
+# Treat images and binaries as binary
+*.png            binary
+*.jpg            binary
+*.jpeg           binary
+*.gif            binary
+*.xcassets       binary
