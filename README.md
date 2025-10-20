@@ -97,6 +97,16 @@ NindoFast/
 
 ---
 
+## 🧹 Code Style
+
+This project uses **SwiftLint** to enforce consistent code style.
+Before committing, run:
+
+   ```bash
+   swiftlint autocorrect
+   ```
+---
+
 ## 🤝 Contributing
 
 Contributions are welcome!  
