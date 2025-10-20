@@ -108,6 +108,51 @@ If you’d like to add new features, fix bugs, or improve documentation:
 
 ---
 
+## 🔀 Branching & Commit Rules
+
+This project follows a **structured branch and commit naming convention** to maintain a clean Git history and consistent workflow.
+
+### 🌱 Branch Naming Convention
+
+Use **lowercase kebab-case** with a clear prefix describing the type of work:
+
+| Prefix | Purpose | Example |
+|---------|----------|----------|
+| `feat/` | New feature | `feat/fasting-timer-structure` |
+| `fix/` | Bug fix | `fix/healthkit-permission-bug` |
+| `chore/` | Maintenance or setup | `chore/xcconfig-cleanup` |
+| `docs/` | Documentation updates | `docs/update-readme` |
+| `refactor/` | Code refactor (no behavior change) | `refactor/fetch-service` |
+| `test/` | Adding or improving tests | `test/fetchservice-unit-tests` |
+
+### 🧾 Commit Message Convention
+
+Follows the **Conventional Commits** standard:
+```
+<type>(<scope>): <short summary>
+```
+
+Examples:
+```
+feat(fasting-timer): add base view and viewmodel
+fix(history): correct date format in session summary
+chore(config): update .gitignore and xcconfig files
+```
+
+### 🔧 Pull Requests
+
+When opening a PR:
+- Use the same naming as your branch for clarity.
+- Keep PRs small and focused.
+- Include a checklist and short description.
+
+Example PR title:
+```
+feat(fasting-timer): base structure for Home/Timer feature
+```
+
+---
+
 ## 📜 License
 
 MIT License © 2025 Jefferson de Souza Batista
