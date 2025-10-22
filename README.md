@@ -23,7 +23,7 @@ This project aims to demonstrate best practices in **Swift 6**, **SwiftData**, a
 | **Language** | Swift 6 |
 | **UI Framework** | SwiftUI |
 | **Persistence** | SwiftData (ready for CloudKit sync) |
-| **Architecture** | MVVM + modular structure |
+| **Architecture** | Clean Swift (VIP) adapted for SwiftUI |
 | **Testing** | Swift Testing + XCTest UI Tests |
 | **Ecosystem Support** | iOS · macOS · visionOS (planned) |
 | **AI & Health** | Core ML · HealthKit (future integration) |
