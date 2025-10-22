@@ -1,0 +1,49 @@
+# SwiftLint Configuration File
+
+# Paths to exclude from linting
+excluded:
+  - Pods
+  - Carthage
+  - .build
+  - NindoFastTests
+  - NindoFastUITests
+  - Config
+
+# Rules to disable
+disabled_rules:
+  - trailing_whitespace
+  - todo
+  - function_body_length
+  - type_body_length
+
+# Analyzer rules (executed only with `swiftlint analyze`)
+analyzer_rules:
+  - unused_declaration
+
+# Opt-in rules (recommended for better code quality)
+opt_in_rules:
+  - empty_count
+  - force_unwrapping
+  - fatal_error_message
+  - first_where
+  - discouraged_optional_collection
+  - attributes
+
+# Warning threshold before SwiftLint exits with failure
+warning_threshold: 10
+
+# Rule customizations
+line_length:
+  warning: 140
+  error: 200
+
+type_name:
+  min_length: 2
+  max_length: 50
+
+identifier_name:
+  min_length: 2
+  max_length: 50
+
+# Report output style
+reporter: "xcode"

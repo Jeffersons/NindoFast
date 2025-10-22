@@ -13,6 +13,10 @@ xcuserdata/
 Packages/
 Package.resolved
 
+# SwiftLint cache
+.swiftlint.yml.lock
+.swiftlint.yml.tmp
+
 # Signing & Profiles
 *.mobileprovision
 *.provisionprofile
