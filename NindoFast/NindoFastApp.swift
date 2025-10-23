@@ -1,31 +1,24 @@
-//
-//  NindoFastApp.swift
-//  NindoFast
-//
-//  Created by Jefferson de Souza Batista on 16/10/25.
-//
-
 import SwiftUI
 import SwiftData
 
 @main
 struct NindoFastApp: App {
+    @StateObject private var fastingTimerViewModel = FastingTimerBuilder.build()
+    
     var sharedModelContainer: ModelContainer = {
-        let schema = Schema([
-            Item.self
-        ])
-        let modelConfiguration = ModelConfiguration(schema: schema, isStoredInMemoryOnly: false)
-
         do {
-            return try ModelContainer(for: schema, configurations: [modelConfiguration])
+            let schema = Schema([FastingSession.self])
+            let configuration = ModelConfiguration(schema: schema, isStoredInMemoryOnly: false)
+            return try ModelContainer(for: schema, configurations: [configuration])
         } catch {
-            fatalError("Could not create ModelContainer: \(error)")
+            fatalError("Failed to create SwiftData ModelContainer: \(error)")
         }
     }()
-
+    
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            FastingTimerView()
+                .environmentObject(fastingTimerViewModel)
         }
         .modelContainer(sharedModelContainer)
     }

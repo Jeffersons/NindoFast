@@ -1,7 +1,7 @@
-//
-//  FastingTimerState.swift
-//  NindoFast
-//
-//  Created by Jefferson de Souza Batista on 22/10/25.
-//
+import Foundation
 
+enum FastingTimerState: Equatable {
+    case idle
+    case running(FastingSession)
+    case completed(FastingSession)
+}
