@@ -1,7 +1,15 @@
-//
-//  FastingTimerModel.swift
-//  NindoFast
-//
-//  Created by Jefferson de Souza Batista on 22/10/25.
-//
+import Foundation
+import SwiftData
 
+@Model
+final class FastingSession {
+    @Attribute(.unique) var id: UUID
+    var startDate: Date
+    var endDate: Date?
+    
+    init(id: UUID = UUID(), startDate: Date, endDate: Date? = nil) {
+        self.id = id
+        self.startDate = startDate
+        self.endDate = endDate
+    }
+}

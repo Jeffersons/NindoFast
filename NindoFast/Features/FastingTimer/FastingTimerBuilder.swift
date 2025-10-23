@@ -1,7 +1,9 @@
-//
-//  FastingTimerBuilder.swift
-//  NindoFast
-//
-//  Created by Jefferson de Souza Batista on 22/10/25.
-//
+import Foundation
 
+struct FastingTimerBuilder {
+    static func build() -> FastingTimerViewModel {
+        let service = FastingTimerService()
+        let repository = FastingTimerRepository()
+        return FastingTimerViewModel(service: service, repository: repository)
+    }
+}
