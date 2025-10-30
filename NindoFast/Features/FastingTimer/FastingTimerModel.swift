@@ -3,7 +3,8 @@ import SwiftData
 
 @Model
 final class FastingSession {
-    @Attribute(.unique) var id: UUID
+    @Attribute(.unique)
+    var id: UUID
     var startDate: Date
     var endDate: Date?
     

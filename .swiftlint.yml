@@ -27,7 +27,6 @@ opt_in_rules:
   - fatal_error_message
   - first_where
   - discouraged_optional_collection
-  - attributes
 
 # Warning threshold before SwiftLint exits with failure
 warning_threshold: 10
