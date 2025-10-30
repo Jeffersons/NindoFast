@@ -14,18 +14,21 @@ struct FastingTimerView: View {
                     viewModel.startFasting()
                 }
                 .buttonStyle(.borderedProminent)
+                .glassEffect(.regular.interactive(), in: .rect(cornerRadius: 20))
                 
             case .running:
                 Button("Stop Fasting") {
                     viewModel.stopFasting()
                 }
                 .buttonStyle(.borderedProminent)
+                .glassEffect(.regular.interactive(), in: .rect(cornerRadius: 20))
                 
             case .completed:
                 Button("Restart") {
                     viewModel.reset()
                 }
                 .buttonStyle(.bordered)
+                .glassEffect(.regular.interactive(), in: .rect(cornerRadius: 20))
             }
         }
         .padding()
