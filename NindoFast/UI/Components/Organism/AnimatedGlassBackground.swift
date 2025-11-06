@@ -56,13 +56,6 @@ struct AnimatedGeometricBackground: View {
     }
 }
 
-#Preview {
-    ZStack {
-        AnimatedGeometricBackground()
-        TimerText(elapsed: 21_110)
-    }
-}
-
 // MARK: - Supporting Shape
 struct Triangle: Shape {
     func path(in rect: CGRect) -> Path {
@@ -72,5 +65,12 @@ struct Triangle: Shape {
         path.addLine(to: CGPoint(x: rect.minX, y: rect.maxY))
         path.closeSubpath()
         return path
+    }
+}
+
+#Preview {
+    ZStack {
+        AnimatedGeometricBackground()
+        TimerText(elapsed: 21_110)
     }
 }

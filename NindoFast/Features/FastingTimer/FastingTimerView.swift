@@ -4,45 +4,22 @@ struct FastingTimerView: View {
     @StateObject private var viewModel = FastingTimerBuilder.build()
     
     var body: some View {
-        VStack(spacing: 32) {
-            Text(title)
-                .font(.largeTitle)
+        ZStack {
+            AnimatedGeometricBackground()
             
-            switch viewModel.state {
-            case .idle:
-                Button("Start Fasting") {
-                    viewModel.startFasting()
+            VStack(spacing: 32) {
+                VStack(spacing: 8) {
+                    TitleText(text: "You're fasting!")
+                    SubtitleText(text: "You body is healing - stay focused.")
+                        .foregroundStyle(.secondary)
+                        .shadow(color: .black.opacity(0.2), radius: 2, x: 0, y: 1)
                 }
-                .buttonStyle(.borderedProminent)
-                .glassEffect(.regular.interactive(), in: .rect(cornerRadius: 20))
+                .multilineTextAlignment(.center)
                 
-            case .running:
-                Button("Stop Fasting") {
-                    viewModel.stopFasting()
-                }
-                .buttonStyle(.borderedProminent)
-                .glassEffect(.regular.interactive(), in: .rect(cornerRadius: 20))
+                SimpleSemiCircleProgress(progress: 0.75)
                 
-            case .completed:
-                Button("Restart") {
-                    viewModel.reset()
-                }
-                .buttonStyle(.bordered)
-                .glassEffect(.regular.interactive(), in: .rect(cornerRadius: 20))
+                Spacer()
             }
-        }
-        .padding()
-        .animation(.easeInOut, value: viewModel.state)
-    }
-    
-    private var title: String {
-        switch viewModel.state {
-        case .idle:
-            return "Ready to Fast"
-        case .running:
-            return "Fasting in Progress"
-        case .completed:
-            return "Fasting Completed"
         }
     }
 }
