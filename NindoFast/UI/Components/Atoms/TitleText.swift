@@ -5,7 +5,7 @@ struct TitleText: View {
     
     var body: some View {
         Text(text)
-            .font(.title3.bold())
+            .font(.title2.bold())
             .foregroundStyle(.primary)
             .multilineTextAlignment(.center)
     }

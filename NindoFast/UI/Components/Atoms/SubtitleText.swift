@@ -5,7 +5,7 @@ struct SubtitleText: View {
     
     var body: some View {
         Text(text)
-            .font(.footnote)
+            .font(.callout)
             .foregroundStyle(.secondary)
             .multilineTextAlignment(.center)
     }
